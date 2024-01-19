@@ -10,9 +10,5 @@ psutil==5.9.6
 realesrgan==0.3.0
 torch==2.1.2
 tqdm==4.66.1
-coloredlogs==15.0.1
-torch --pre --index-url https://download.pytorch.org/whl/cu121
-torchvision --pre --index-url https://download.pytorch.org/whl/cu121
-torchaudio --pre --index-url https://download.pytorch.org/whl/cu121
-tqdm==4.66.1
+# coloredlogs==15.0.1
 ffmpeg
