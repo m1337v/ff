@@ -70,10 +70,10 @@ MODELS : ModelSet =\
 		'template': 'ffhq_512',
 		'size': (512, 512)
 	},
-	'restoreformer':
+	'restoreformer_plus_plus':
 	{
-		'url': 'https://github.com/facefusion/facefusion-assets/releases/download/models/restoreformer.onnx',
-		'path': resolve_relative_path('../.assets/models/restoreformer.onnx'),
+		'url': 'https://github.com/facefusion/facefusion-assets/releases/download/models/restoreformer_plus_plus.onnx',
+		'path': resolve_relative_path('../.assets/models/restoreformer_plus_plus.onnx'),
 		'template': 'ffhq_512',
 		'size': (512, 512)
 	}
@@ -156,9 +156,9 @@ def pre_process(mode : ProcessMode) -> bool:
 
 
 def post_process() -> None:
+	read_static_image.cache_clear()
 	if facefusion.globals.video_memory_strategy == 'strict' or facefusion.globals.video_memory_strategy == 'moderate':
 		clear_frame_processor()
-		read_static_image.cache_clear()
 	if facefusion.globals.video_memory_strategy == 'strict':
 		clear_face_analyser()
 		clear_content_analyser()
