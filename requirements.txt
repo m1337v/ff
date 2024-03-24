@@ -3,7 +3,7 @@ gradio>=3.50.2
 numpy>=1.25.2
 onnx>=1.15.0
 onnxruntime_gpu==1.17.0
-opencv-python==4.8.1.76
+opencv-python>=4.8.0.76
 psutil>=5.9.5
 tqdm>=4.66.2
 scipy>=1.11.4
